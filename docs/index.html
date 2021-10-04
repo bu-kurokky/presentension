@@ -5,14 +5,30 @@
 <title>Presentension! -Presentation + Extension-</title>
 <meta name="description" content="About Presentension! on Chrome extension">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0}
+header{
+	background:#000;
+	text-align:center;
+	color:#fff;
+	padding:16px;
+}
+header h1{text-align:center;width:100%}
+main {padding:32px}
+dl{margin:0 auto;width:1000px}
+dt{font-weight:bold;}
+dd{margin:8px 16px 16px 16px;}
+footer{
+	
+}
+</style>
 </head>
 <body>
 <header>
 <h1>Presentension! -Presentation + Extension-</h1>
 </header>
 <main>
-<div id="ja">
-<h1>日本語</h1>
+<div class="ja">
 <dl>
 	<dt>これは何ですか？</dt>
 	<dd>
@@ -44,8 +60,7 @@
 	</dd>
 </dl>
 </div>
-<div id="en">
-<h1>English</h1>
+<div class="en">
 <dl>
 	<dt>What is this?</dt>
 	<dd>
@@ -83,12 +98,15 @@
 </footer>
 <script>
 const language = window.navigator.language
+let dom
 if (language == "ja"){
-	document.getElementById("en").style.display = 'none';
+	dom = document.getElementsByClassName("en")
 }else{
-	document.getElementById("ja").style.display = 'none';
+	dom = document.getElementsByClassName("ja")
 }
-
+[].forEach.call(dom, (e) => {
+    e.style.display = 'none'
+})
 
 </script>
 </body>
