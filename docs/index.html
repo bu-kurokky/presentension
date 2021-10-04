@@ -1,3 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Presentension! -Presentation + Extension-</title>
+<meta name="description" content="About Presentension! on Chrome extension">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
-	test
+<header>
+<h1>Presentension! -Presentation + Extension-</h1>
+</header>
+<main>
+<div id="ja">
+<h1>日本語</h1>
+<dl>
+	<dt>これは何ですか？</dt>
+	<dd>
+		Google Chrome用の拡張ツールです。
+	</dd>
+	<dt>何ができますか？</dt>
+	<dd>
+		ページに自由にお絵かきができます。
+	</dd>
+	<dt>どうやって使いますか？</dt>
+	<dd>
+		お絵かきしたページで目のアイコンを押してください。
+	</dd>
+	<dt>すぐに書けない、挙動がおかしいページがあるんですが…</dt>
+	<dd>
+		ページがちゃんと表示されてから目のアイコンを押してください。
+	</dd>
+	<dt>ページキャプチャがうまくできません。</dt>
+	<dd>
+		おまけで作った機能なので、<a href="https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl" target="_blank">こちら</a>の拡張を使うと幸せになります。
+	</dd>
+	<dt>途中でお絵かきできなくなるページがあります。</dt>
+	<dd>
+		TwitterなのどAjaxを使ったページは拡張を使う時に表示されていた部分までしかお絵かきできません
+	</dd>
+	<dt>ブラウザサイズが変わると表示がおかしくなります</dt>
+	<dd>
+		すぐに対応する方法を思いつかないまま作りました。ごめんなさい。
+	</dd>
+</dl>
+</div>
+<div id="en">
+<h1>English</h1>
+<dl>
+	<dt>What is this?</dt>
+	<dd>
+		This is an Extension tool for Google Chrome.
+	</dd>
+	<dt>What can this tool do?</dt>
+	<dd>
+		You can draw on a page.
+	</dd>
+	<dt>How do I use it?</dt>
+	<dd>
+		You click the Eye icon on this extension.
+	</dd>
+	<dt>I can not draw as soon as and something is wrong.</dt>
+	<dd>
+		Please wait correctly finished the page load.
+	</dd>
+	<dt>I can not correctly capture.</dt>
+	<dd>
+		I reccomend <a href="https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl" target="_blank">this one</a>.
+	</dd>
+	<dt>I can not draw on the way.</dt>
+	<dd>
+		The drawing is possible only screen area before click. (be careful using Ajax pages.)
+	</dd>
+	<dt>The layout is off when the change browser size.</dt>
+	<dd>
+		Sorry. I have no idea.
+	</dd>
+</dl>
+</div>
+</main>
+<footer>
+
+</footer>
+<script>
+const language = window.navigator.language
+if (language == "ja"){
+	document.getElementById("en").style.display = 'none';
+}else{
+	document.getElementById("ja").style.display = 'none';
+}
+
+
+</script>
 </body>
+</html>
