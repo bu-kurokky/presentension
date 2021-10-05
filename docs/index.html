@@ -47,7 +47,7 @@ footer{
 	</dd>
 	<dt>すぐに書けない、挙動がおかしいページがあるんですが…</dt>
 	<dd>
-		ページがちゃんと表示されてから目のアイコンを押してください。
+		ページがちゃんとローディングが終わって表示されてから目のアイコンを押してください。
 	</dd>
 	<dt>ページキャプチャがうまくできません。</dt>
 	<dd>
@@ -117,7 +117,7 @@ footer{
 <script>
 const language = window.navigator.language
 let dom
-if (language == "ja"){
+if (language != "ja"){
 	dom = document.getElementsByClassName("en")
 }else{
 	dom = document.getElementsByClassName("ja")
