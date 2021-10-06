@@ -8,20 +8,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 *{margin:0;padding:0}
-header{
+header, footer{
 	background:#000;
 	text-align:center;
 	color:#fff;
 	padding:16px;
 }
 header h1{text-align:center;width:100%}
-main {padding:32px}
+main {margin:0 auto;width:1000px;margin-bottom:32px;}
 dl{margin:0 auto;width:1000px}
 dt{font-weight:bold;}
 dd{margin:8px 16px 16px 16px;}
-footer{
-	
+main h1{font-size:20px;border-bottom:1px solid #000;margin-bottom:8px;border-left:8px solid #000;padding-left:16px;box-sizing: border-box;margin-top:32px;}
+main ul{margin-left:32px;}
+a{color:#000}
+a:hover{text-decoration:none;}
+iframe{
+	margin:32px auto;
 }
+article p{color:#f00;font-weight:bold;text-align:center;}
+main div:first-child{text-align: center}
 </style>
 </head>
 <body>
@@ -30,7 +36,16 @@ footer{
 <h1 class="en">Presentension! -Presentation + Extension-</h1>
 </header>
 <main>
+<div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3zKtfJ6jvYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<article>
+<p class="en">I have applied to Google. Plase wait.</p>
+<p class="ja">只今Googleに申請中です。公式版をお待ちください。<br>(デベロッパーモードが使えて開発版を使いたい方はページ最下部にあります。)</p>
+</article>
+
 <div class="ja">
+<h1>よくある質問</h1>
 <dl>
 	<dt>これは何ですか？</dt>
 	<dd>
@@ -68,8 +83,14 @@ footer{
 		思いつきで作ったので…時間ある時に修正できたら修正します…
 	</dd>
 </dl>
+<h1>ショートカットキー(> 1.0.2)</h1>
+<ul>
+	<li>Alt+V = 表示・非表示の切り替え</li>
+	<li>Alt+B = 削除</li>
+</ul>
 </div>
 <div class="en">
+<h1>FAQ</h1>
 <dl>
 	<dt>What is this?</dt>
 	<dd>
@@ -109,15 +130,33 @@ footer{
 		I'll do my bast... Better than nothing!
 	</dd>
 </dl>
+<h1>Shortcut Keys</h1>
+<ul>
+	<li>Alt+V = hide/show</li>
+	<li>Alt+B = delete</li>
+</ul>
 </div>
+<h1>Special Thanks</h1>
+<ul>
+	<li><a href="https://html2canvas.hertzen.com/" target="_blank">html2canvas</a></li>
+	<li><a href="http://www.openjs.com/scripts/events/keyboard_shortcuts/index.php" target="_blank">shortcuts.js</a></li>
+</ul>
+
+<h1 class="ja">開発・デバッグバージョン</h1>
+<h1 class="en">Development version </h1>
+<ul>
+	<li><a href="./presentension0103.zip">version 1.0.3</a>(add shorcut key)</li>
+</ul>
+<p class="en">For users who can use development mode. Please wait public release version.</p>
+<p class="ja">Chromeのデベロッパーモードが使える方のみ、意味不明な方は公式の方がリリースされるのをお待ちください。</p>
 </main>
 <footer>
-
+<p>&copy;<script>document.write(new Date().getFullYear());</script> kurokky</p>
 </footer>
 <script>
 const language = window.navigator.language
 let dom
-if (language != "ja"){
+if (language == "ja"){
 	dom = document.getElementsByClassName("en")
 }else{
 	dom = document.getElementsByClassName("ja")
