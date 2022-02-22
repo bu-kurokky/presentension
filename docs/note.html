@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>これぐらいで読めまっせー for note</title>
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="description" content="note.comの記事の文字数に応じた読む推定時間を表示します">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0}
+header, footer{
+	background:#41c9b3ff;
+	text-align:center;
+	color:#fff;
+	padding:16px;
+}
+header h1{text-align:center;width:100%}
+main {margin:0 auto;width:1000px;margin-bottom:32px;}
+dl{margin:0 auto;width:1000px}
+dt{font-weight:bold;}
+dd{margin:8px 16px 16px 16px;}
+main h1{font-size:20px;border-bottom:1px solid #41c9b3ff;margin-bottom:8px;border-left:8px solid #41c9b3ff;padding-left:16px;box-sizing: border-box;margin-top:32px;}
+main ul{margin-left:32px;}
+a{color:#000}
+a:hover{text-decoration:none;}
+iframe{
+	margin:32px auto;
+}
+table{border-collapse:collapse;}
+td, th{border:1px solid #41c9b3ff; text-align:center;padding:2px 4px}
+
+article p{color:#f00;font-weight:bold;text-align:center;}
+main div:first-child{text-align: center}
+</style>
+</head>
+<body>
+<header>
+<h1 class="ja">これぐらいで読めまっせー for note</h1>
+</header>
+<main>
+<div style="margin-top:16px;">
+<img src="./img/note_main.png" width="600">
+</div>
+
+<article>
+<p class="ja">現在申請中でーす。</p>
+</article>
+
+<div class="ja">
+<h1>よくある質問</h1>
+<dl>
+	<dt>読む速度にばらつきがあるのはなぜですか？</dt>
+	<dd>
+		当たり前ですが1分間で読む文字数は人によって違うようで諸説あるっぽいです。この拡張は1分間で500文字〜800文字読む前提の時間になっています。
+	</dd>
+	<dt>表示がちょっと遅れるのはなんでですか？</dt>
+	<dd>
+		note.comの仕様でちょっと遅れてからじゃないと情報が取れないからです。
+	</dd>
+	<dt>文字数に「約」が付いているのはなぜですか？</dt>
+	<dd>
+		半角と全角文字や句読点・記号をどうカウントするのか迷ったので「約」と表記しています。
+	</dd>
+	<dt>画像数が1枚多くないですか？</dt>
+	<dd>
+		ヘッダー画像を含んだ数になっています。
+	</dd>
+	<dt>一部の記事で表示されないものがあるんですが…</dt>
+	<dd>
+		完全独自ドメインで運営されている記事は表示されません。note.com、note.jp、note.XXXX.com、note.XXXX.jpのみ対応しています。
+	</dd>
+</dl>
+</div>
+</main>
+<footer>
+<p>&copy;<script>document.write(new Date().getFullYear());</script> kurokky</p>
+</footer>
+</body>
+</html>
