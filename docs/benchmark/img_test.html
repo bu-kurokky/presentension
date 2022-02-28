@@ -25,7 +25,13 @@ ul{
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom:32px;
+	padding-bottom:32px;
 }
+
+ul:last-of-type{
+	border-bottom:1px solid #000;
+}
+
 ul li{
 	border: 1px solid #000;
 	margin:8px 4px;
@@ -210,8 +216,22 @@ b{
 		<code>ffmpeg -i gradation.mov -vcodec libwebp -compression_level 0  -filter:v fps=fps=10 -lossless 0 -loop 0 -preset 4 -an -vsync 0 gradation_10_lv0.webp</code>
 	</li>
 </ul>
+<p class="en">The above is a benchmark that kurokky did on his own. If you want to know more details, please see <a href="https://dev.to/kurokky/whats-the-best-way-how-to-a-movie-file-convert-to-an-animation-imageanimation-gif-or-animation-png-or-webp-3mm5">dev.to</a>.</p>
+<p>上記はkurokkyが勝手にやったベンチマークです。詳細を知りたい方は<a href="https://note.com/kurokky/n/n49d1eff7bac9">note</a>の記事をご覧ください<br>
+</p class="ja">
+<script>
+const language = window.navigator.language
+let dom
+if (language == "ja"){
+	dom = document.getElementsByClassName("en")
+}else{
+	dom = document.getElementsByClassName("ja")
+}
+[].forEach.call(dom, (e) => {
+    e.style.display = 'none'
+})
 
-
+</script>
 </main>
 </body>
 </html>
