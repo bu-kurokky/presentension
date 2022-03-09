@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Status Changer</title>
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="description" content="About Presentension! on Chrome extension">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0}
+header, footer{
+	background:#000;
+	text-align:center;
+	color:#fff;
+	padding:16px;
+}
+header h1{text-align:center;width:100%}
+main {margin:0 auto;width:1000px;margin-bottom:32px;}
+dl{margin:0 auto;width:1000px}
+dt{font-weight:bold;}
+dd{margin:8px 16px 16px 16px;}
+main h1{font-size:20px;border-bottom:1px solid #000;margin-bottom:8px;border-left:8px solid #000;padding-left:16px;box-sizing: border-box;margin-top:32px;}
+main ul{margin-left:32px;}
+main ol{margin-left:32px;}
+
+a{color:#000}
+a:hover{text-decoration:none;}
+iframe{
+	margin:32px auto;
+}
+table{border-collapse:collapse;}
+td, th{border:1px solid #000; text-align:center;padding:2px 4px}
+
+article p{color:#f00;font-weight:bold;text-align:center;}
+main div:first-child{text-align: center}
+</style>
+</head>
+<body>
+<header>
+<h1 class="ja">StatusChanger For Figma Design</h1>
+<h1 class="en">StatusChanger For Figma Design</h1>
+</header>
+<main>
+<div>
+<img src="./img/sc.gif" width="1024">
+</div>
+<article>
+<p class="en">Status Changer allows you to easily change the name of the person in charge and the modified date on your own Component set.</p>
+<p class="ja">Status Changerは、自作のコンポーネントセットの担当者名や更新日時を簡単に変更することができるFigma Pluginです。</p>
+</article>
+
+<div class="ja">
+<h1>使い方</h1>
+<ol>
+	<li>StatusChangerをインストールして起動します。</li>
+	<li>ステータスバー用のコンポーネントセットのテンプレートができるので自由にカスタマイズします。</li>
+	<li>ステータスバーを適応したいFrameなどを選択して、StatusChangerを起動します。</li>
+	<li>自分でカスタマイズしたコンポーネントセットの値が選択できるので、選択してSETボタンを押すとステータスバーが追加されます。</li>
+	<li>ステータスを変更した後は、右側のプロパティ画面のプラグインから「Change user name and modification time.」をクリックします。</li>
+</ol>
+<h1>日付について</h1>
+<p>Status Changerは各国や地域の表記に対応できるようになっています。<br>
+例として、「2022年1月2日の午後11時3分」の場合</p><br>
+<p>
+日本方式の場合テンプレートに「YYYY/MM/DD HH:mm」と書くと「02/01/22 11.03 pm」と表示されるようになります。<br>
+アメリカ方式の場合テンプレートに「MM-DD-YY H:mm a」と書くと「01/02/22 11:03 pm」と表示されるようになります。<br>
+イギリス方式の場合テンプレートに「YYYY/MM/DD HH:mm」と書くと「2022/01/02 23:03」と表示されるようになります。
+</p><br>
+<table>
+<tr><th>テンプレート文字列</th><th>実際の文字列</th></tr>
+<tr><td>YYYY</td><td>2022</td></tr>
+<tr><td>YY</td><td>22</td></tr>
+<tr><td>MM</td><td>01</td></tr>
+<tr><td>M</td><td>1</td></tr>
+<tr><td>DD</td><td>02</td></tr>
+<tr><td>D</td><td>2</td></tr>
+<tr><td>HH</td><td>23</td></tr>
+<tr><td>H</td><td>11</td></tr>
+<tr><td>mm</td><td>03</td></tr>
+<tr><td>m</td><td>3</td></tr>
+<tr><td>a</td><td>am</td></tr>
+</table>
+<h1>注意事項</h1>
+<ul>
+	<li>テンプレートとなるコンポーネントセットは必ずページの直下(ページの直下であればどのページでも可)に置いてください。</li>
+	<li>プロパティの名前を元に文字列を置換しているのでプロパティ名を変更しないでください。</li>
+</ul>
+
+</div>
+<div class="en">
+<h1>HOW TO USE</h1>
+<ol>
+	<li>Install `Status Changer` and run it inside of a project.</li>
+	<li>Edit the Component Set created for the Status bar.(Note whether the item has been added to Variants.)</li>
+	<li>Select the Frames, etc. to which you want to add a status bar and run Status Changer.</li>
+	<li>You can select your own customized component set values, and the status bar(s) will be added when you select and press the SET button.</li>
+	<li>After changing the status, click "Change user name and modification time." from the plugin in the properties screen on the right.</li>
+</ol>
+<h1>About Dates and Dates</h1>
+<p>Multiple country formats are supported, including American and British, Asian, etc.<br>
+Sample For January 9, 2022 at 11:09 p.m.</p><br>
+<p>
+For the British "DD/MM/YY H.mm a"<br>
+For the U.S. "MM-DD-YY H:mm a"<br>
+For the Japan "YYYY/MM/DD HH:mm"<br>
+</p><br>
+<table>
+<tr><th>String</th><th>Actual</th></tr>
+<tr><td>YYYY</td><td>2022</td></tr>
+<tr><td>YY</td><td>22</td></tr>
+<tr><td>MM</td><td>01</td></tr>
+<tr><td>M</td><td>1</td></tr>
+<tr><td>DD</td><td>02</td></tr>
+<tr><td>D</td><td>2</td></tr>
+<tr><td>HH</td><td>23</td></tr>
+<tr><td>H</td><td>11</td></tr>
+<tr><td>mm</td><td>03</td></tr>
+<tr><td>m</td><td>3</td></tr>
+<tr><td>a</td><td>am</td></tr>
+</table>
+<h1>CAUTION</h1>
+<ul>
+	<li>Be sure to place it directly below the page.</li>
+	<li>Do not rename the properties.</li>
+</ul>
+</div>
+</main>
+<footer>
+<p>&copy;<script>document.write(new Date().getFullYear());</script> kurokky</p>
+</footer>
+<script>
+const language = window.navigator.language
+let dom
+if (language == "ja"){
+	dom = document.getElementsByClassName("en")
+}else{
+	dom = document.getElementsByClassName("ja")
+}
+[].forEach.call(dom, (e) => {
+    e.style.display = 'none'
+})
+
+</script>
+</body>
+</html>
