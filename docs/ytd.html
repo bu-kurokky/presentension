@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Download the Video List On Youtube.</title>
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="description" content="About Download the Video List On Youtube.(Chrome extension)">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0}
+header, footer{
+	background:#f00;
+	text-align:center;
+	color:#fff;
+	padding:16px;
+}
+header h1{text-align:center;width:100%}
+main {margin:0 auto;width:1000px;margin-bottom:32px;}
+dl{margin:0 auto;width:1000px}
+dt{font-weight:bold;}
+dd{margin:8px 16px 16px 16px;}
+main h1{font-size:20px;border-bottom:1px solid #000;margin-bottom:8px;border-left:8px solid #000;padding-left:16px;box-sizing: border-box;margin-top:32px;}
+main ul{margin-left:32px;}
+a{color:#000}
+a:hover{text-decoration:none;}
+iframe{
+	margin:32px auto;
+}
+table{border-collapse:collapse;}
+td, th{border:1px solid #f00; text-align:center;padding:2px 4px}
+
+article p{color:#f00;font-weight:bold;text-align:center;}
+main div:first-child{text-align: center}
+</style>
+</head>
+<body>
+<header>
+<h1 class="ja">Download the Video List On Youtube.</h1>
+<h1 class="en">Download the Video List On Youtube.</h1>
+</header>
+<main>
+<div style="margin-top:16px;">
+<img src="./img/ytd.png" width="600" style="border-radius:16px">
+</div>
+<article>
+</article>
+
+<div class="ja">
+<h1>よくある質問</h1>
+<dl>
+	<dt>これは何ですか？</dt>
+	<dd>
+		Google Chrome用の拡張ツールです。
+	</dd>
+	<dt>何ができますか？</dt>
+	<dd>
+		Youtubeのビデオのリストをテキストファイルに保存できます。
+	</dd>
+	<dt>どうやって使いますか？</dt>
+	<dd>
+		YoutubeのTOPページ、もしくは任意のチャンネルのビデオタブでアイコンを押してください。
+	</dd>
+	<dt>チャンネル全ての動画データが取得できないのですが？</dt>
+	<dd>
+		あくまであなたのブラウザで表示されているリストになるので、沢山リストがあるチャンネルは頑張ってスクロールしてください。
+	</dd>
+	<dt>動画の長さがおかしいです</dt>
+	<dd>
+		拡張のアイコンを押した時にブラウザ上に時間表示がされていないと思います。時間の表示は少し遅れて表示されるのでちょっと待ってからクリックしてください。
+	</dd>
+	<dt>アップロードした日時を取得したいのですが…</dt>
+	<dd>
+		表示上のデータを取得しているため、日付が「1年前」など丸められたデータになってしまうので今回は見送りました。
+	</dd>
+	<dt>本当にどこにも情報を送っていませんか？</dt>
+	<dd>
+		はい、作者自体もそんな拡張嫌なのでAPIサーバーなど含めてどこにも送っていません。完全にあなたのブラウザの情報をまとめているだけです。
+	</dd>
+	<dt>バグがあるよ…<dt>
+	<dd>
+		思いつきで作ったので…時間ある時に修正できたら修正します…
+	</dd>
+</dl>
+</div>
+<div class="en">
+<h1>FAQ</h1>
+<dl>
+	<dt>What is this?</dt>
+	<dd>
+		This is an Extension tool for Google Chrome.
+	</dd>
+	<dt>What can this tool do?</dt>
+	<dd>
+		You can save the list of Youtube videos to a text file.
+	</dd>
+	<dt>How do I use it?</dt>
+	<dd>
+		Click the icon when you see the TOP page of Youtube or the video tab of any channel.
+	</dd>
+	<dt>Why can't I get all the video data for a channel?<dt>
+	<dd>This can download only the list displayed in your browser, so if a channel has many listings, you should scroll through them(many times).</dd>
+	
+	<dt>The time(length) of the video is wrong.<dt>
+	<dd>The time display will appear with a slight delay, so please wait a moment before clicking on it.</dd>
+	<dt>How can I get the date and time of the upload?</dt>
+	<dd>The data displayed would be rounded data such as "one year ago" and so on, so it was not used this time.</dd>
+	<dt>Are you sure you are not sending information anywhere?</dt>
+	<dd>Of course, This extension does NOT send your data anywhere, including API servers, because I do NOT LIKE such extensions too. Instead, it is put together of your browser's data.</dd>
+	<dt>
+		I found some bugs.
+	</dt>
+	<dd>
+		I'll do my best... Better than nothing!
+	</dd>
+</dl>
+</div>
+<!--
+<h1 class="ja">開発バージョン</h1>
+<h1 class="en">Development version </h1>
+<ul>
+	<li><a href="./presentension0105.zip">version 1.0.5</a>(add shorcut keys)</li>
+	<li><a href="./presentension0103.zip">version 1.0.3</a>(add shorcut keys)</li>
+</ul>
+<p class="en">For users who can use development mode. Please wait public release version.</p>
+<p class="ja">Chromeのデベロッパーモードが使える方のみ、意味不明な方は公式の方がリリースされるのをお待ちください。</p>
+-->
+</main>
+<footer>
+<p>&copy;<script>document.write(new Date().getFullYear());</script> kurokky</p>
+</footer>
+<script>
+const language = window.navigator.language
+let dom
+if (language == "ja"){
+	dom = document.getElementsByClassName("en")
+}else{
+	dom = document.getElementsByClassName("ja")
+}
+[].forEach.call(dom, (e) => {
+    e.style.display = 'none'
+})
+
+</script>
+</body>
+</html>
